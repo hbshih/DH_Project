@@ -55,7 +55,7 @@ bool goToward = true;
 
 // -- DEFINE WEATHER MODE
 
-int WeatherMode = 1;
+int WeatherMode = 4;
 
 //------------------SETUP------------------
 void setup()
@@ -85,16 +85,19 @@ void loop() {
     switch (WeatherMode) {
       case 3:
         sun();
+        Serial.println("P");
         break;
       case 2:
         lightning();
+        Serial.println("T");
         break;
       case 4:
         rain();
+        Serial.println("P");
         break;
       case 1:
         rainbow_march(100, 5);
-        
+        Serial.println("P");
         break;
       default:
         // statements
