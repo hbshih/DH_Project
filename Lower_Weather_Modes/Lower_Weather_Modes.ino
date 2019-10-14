@@ -27,8 +27,8 @@ int STEPS = 4;           //Wider or narrower bands of color
 int SPEEDO = 10;         //The speed of the animation
 
 // have 3 independent CRGBs - 2 for the sources and one for the output
-CRGB leds2[NUM_LEDS];
-CRGB leds3[NUM_LEDS];
+/*CRGB leds2[NUM_LEDS];
+CRGB leds3[NUM_LEDS];*/
 int jumpCount = 0;
 
 /* Lightning Variables */
