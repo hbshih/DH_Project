@@ -7,7 +7,7 @@
 #define CLOCK_PIN 5
 #define BUTTON_PIN 5
 #define COLOR_ORDER GBR
-#define NUM_LEDS 144      // Change to reflect the number of LEDs you have
+#define NUM_LEDS 216      // Change to reflect the number of LEDs you have
 int vib_pin = A0;
 
 CRGB leds[NUM_LEDS];      //naming our LED array
@@ -57,7 +57,7 @@ uint8_t ledlen;                                               // Length of a fla
 
 // SET UP FOR GAME MODE
 
-int GameMode = 1;
+int GameMode = 2;
 
 //------------------SETUP------------------
 void setup()
@@ -82,6 +82,7 @@ void loop() {
   Serial.print("\n");
   Serial.print(val);
   Serial.print("\n");
+  
 
 
   switch (GameMode) {
@@ -111,7 +112,7 @@ void StrengthGameController()
      Serial.println("PLAY MATRIX");
     celebration();
 
-    if (val < 100)
+    if (val > 1000)
     {
       matrixCount += 1;
     }
@@ -127,10 +128,10 @@ void StrengthGameController()
   {
     delay(50);
 
-    if (val < 5)
+    if (val > 1023)
     {
       StrengthGame(3);
-    } else if (val < 30)
+    } else if (val > 1000)
     {
       StrengthGame(1);
     }

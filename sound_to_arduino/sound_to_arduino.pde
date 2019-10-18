@@ -4,6 +4,7 @@ import ddf.minim.*;
 Minim minim;
 AudioPlayer player1;
 AudioPlayer player2;
+AudioPlayer player3;
 
 int lf = 10; // Linefeed in ASCII
 String myString = null;
@@ -29,12 +30,10 @@ void setup() {
   // Change the name of the audio file here and add it by clicking on "Sketch —> Import File"
   player1 = minim.loadFile("thunder.mp3");
   player2 = minim.loadFile("coin.mp3");
+  player3 = minim.loadFile("Rain.mp3");
 }
 
 void draw() {
-
-
-
 
   // check if there is something new on the serial port
   while (myPort.available() > 0) {
@@ -68,6 +67,13 @@ void draw() {
           {
             player2.rewind();
             player2.play();
+          }
+        }
+        if (myString.equals("R")) {
+          if (player3.isPlaying() == false) 
+          {
+            player3.rewind();
+            player3.play();
           }
         }
       }

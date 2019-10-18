@@ -33,7 +33,7 @@ int jumpCount = 0;
 
 /* Lightning Variables */
 // Global variables can be changed on the fly.
-uint8_t max_bright = 255;                                      // Overall brightness definition. It can be changed on the fly.
+uint8_t max_bright= 255;                                      // Overall brightness definition. It can be changed on the fly.
 uint8_t frequency = 50;                                       // controls the interval between strikes
 uint8_t flashes = 8;                                          //the upper limit of flashes per strike
 unsigned int dimmer = 1;
@@ -55,7 +55,7 @@ bool goToward = true;
 
 // -- DEFINE WEATHER MODE
 
-int WeatherMode = 4;
+int WeatherMode = 1;
 
 //------------------SETUP------------------
 void setup()
@@ -93,7 +93,7 @@ void loop() {
         break;
       case 4:
         rain();
-        Serial.println("P");
+        Serial.println("R");
         break;
       case 1:
         rainbow_march(100, 5);
